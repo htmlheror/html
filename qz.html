@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quiz HTML Code Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="qz.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <img src="qz.png" class="logo">
+         
+            <ul>
+                <li><a href="index.html"><u>HOME</u></a></li>
+                    <li><a href="canva.html"><u>Premium-tools</u></a></li>
+                    <li><a href="#"><u>Watch Tutorial</u></a></li>
+                    <li><a href="sec.html"><u>privacy-policy</u></a></li>
+            </ul>
+        </div>
+        <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>
+        <div class="info">
+            <h3> <span>Welcome to theQuiz HTML Code Generator</span></h3>
+            <h1><span><U><B>HTML-HREO</U></B></span></h1><br><br>
+            <p>Generate HTML code for your quizzes easily.
+                Just fill out the form below to get started.</p><br><br>
+                <h3> <span><u><b>Introduction:
+                </b></u>
+                </span></h3><br>
+                <p>Read the welcome message and information about the Quiz HTML Code Generator.
+                </p><br>
+
+                <h3> <span><u><b>Form Input:
+
+                </b></u>
+                </span></h3><br>
+                <p>
+                    Scroll down to the quiz section where you'll find a form to input quiz details.
+                    
+                </p><br>
+
+                <h3> <span><u><b>Input Details:
+
+                </b></u>
+                </span></h3><br>
+                
+                <h4> <span><u><b>Fill out the form fields:
+
+
+                </b></u>
+                </span></h4><br>
+                <h5> <span><u><b>Question: 
+
+
+                </b></u>
+                </span></h5><br>
+
+                <p>Enter your quiz question.
+
+                </p><br>
+                <h5> <span><u><b>Options: 
+
+
+                </b></u>
+                </span></h5><br>
+
+                <p>Enter at least two options for the quiz.
+
+                </p><br>
+                <h3> <span><u><b>Add/Remove Options: 
+
+                </b></u>
+                </span></h3><br>
+                <p>
+                    Use the "Add Option" and "Remove Option" buttons if you need more than two options.
+
+                    
+                </p><br>
+                <h3> <span><u><b>Correct Option:  
+
+                </b></u>
+                </span></h3><br>
+                <p>
+                    Specify the correct option number (1 for the first option, 2 for the second, and so on).
+
+                    
+                </p><br>
+
+                <h3> <span><u><b>Generate HTML:
+ 
+
+                </b></u>
+                </span></h3><br>
+                <p>
+                    Click on the "Generate Quiz HTML" button to generate the HTML code based on your input.
+
+                    
+                </p><br>
+                <h3> <span><u><b>View Generated HTML:
+
+ 
+
+                </b></u>
+                </span></h3><br>
+                <p>
+                    The generated HTML code will appear in the textarea below the form (textarea id="quizHTML">). This code represents your quiz formatted in HTML.
+
+
+                    
+                </p><br>
+                <h3> <span><u><b>Copy HTML
+ 
+
+                </b></u>
+                </span></h3><br>
+                <p>
+                    Click on the "Copy HTML" button to copy the generated HTML code to your clipboard. You can then paste this code into your website or wherever you want to display the quiz.
+
+
+                    
+                </p><br>
+                <h3> <span><u><b>Reset Form:
+
+ 
+
+                </b></u>
+                </span></h3><br>
+                <p>
+                    If needed, use the "Reset Form" button to clear all fields and start over.
+
+
+
+                    
+                </p><br>
+                <h3> <span><u><b>Customization and Integration:
+
+
+ 
+
+                </b></u>
+                </span></h3><br>
+                <p>
+                    Customize the HTML and CSS (style.css and s.js in your project) to match your website's design and functionality requirements.
+
+
+
+
+                    
+                </p><br>
+                <h3> <span><u><b>Testing:
+
+
+ 
+
+                </b></u>
+                </span></h3><br>
+                <p>
+                    Test the generated quiz HTML in your web environment to ensure it works correctly and appears as expected.
+
+This generator allows you to quickly create basic quizzes using HTML code without needing to write code manually, making it convenient for both beginners and experienced users alike.
+</p><br>
+
+
+
+
+                
+
+
+
+
+                <br><br><a href="qzcss.html">add-design</a>
+        </div>
+        <div class="quiz-section">
+            <form id="quizForm">
+                <label for="question">Question:</label>
+                <input type="text" id="question" name="question" required>
+                <div id="optionsContainer">
+                    <label for="option1">Option 1:</label><br>
+                    <input type="text" id="option1" name="option1" required><br>
+                    <label for="option2">Option 2:</label><br>
+                    <input type="text" id="option2" name="option2" required><br>
+                </div>
+                <button type="button" class="btn" onclick="addOption()">Add Option</button>
+                <button type="button" class="btn" onclick="removeOption()">Remove Option</button>
+                <label for="correctOption">Correct Option:</label>
+                <input type="number" id="correctOption" name="correctOption" min="1" required>
+                <button type="button" class="btn" onclick="generateQuiz()">Generate Quiz HTML</button>
+                <button type="button" class="btn" onclick="resetForm()">Reset Form</button>
+            </form>
+            <textarea id="quizHTML" rows="10" cols="50" readonly></textarea>
+            <button class="submit-btn" onclick="copyHTML()">Copy HTML</button>
+            
+            <div id="quizContainer"></div>
+        </div>
+    </div>
+   
+    <script src="qss.js"></script>
+    <script src="qz.js"></script>
+</body>
+</html>

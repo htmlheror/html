@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #ffffff;
+
+}
+
+.main {
+    width: 100%;
+    
+    background: url('') no-repeat center center/cover;
+    height: 300vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000000;
+    position: absolute;
+}
+
+.navbar {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    position: absolute;
+    top: 0;
+}
+
+.navbar .logo {
+    width: 160px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #130e0e;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.4s ease;
+}
+
+.navbar ul li a:hover {
+    color: rgb(0, 192, 235);
+}
+
+.info {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.info h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.info h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.info span {
+    color: rgb(3, 215, 230);
+}
+
+.info a {
+    text-decoration: none;
+    color: #dadbdd;
+    background: rgb(4, 116, 207);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.4s ease;
+}
+
+.info a:hover {
+    background: rgb(59, 174, 209);
+}
+
+.app {
+    display: flex;
+    
+
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 800px;
+    margin-top: 100px;
+}
+
+#editor {
+    flex: 1;
+    height: 2000%;
+    margin-bottom: 50px;
+    padding: 20px;
+    flex-direction: column;
+    background: #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(252, 252, 252, 0.1);
+}
+
+#formdown {
+    width: 100%;
+    
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+#output, #code {
+    flex: 1;
+    height: 40px;
+    padding: 20px;
+    background: #fffdfd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    font-size: 14px;
+}
+
+#code {
+
+    margin-left: 10px;
+    width: 100%;
+    height: 50%;
+    border-left: 1px solid #fff8f8;
+}
+#output {
+    flex: 1;
+    padding: 20px;
+    background: #ffffff; /* Change background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    font-size: 16px; /* Increase font size for better readability */
+    line-height: 1.6; /* Increase line height */
+    color: #000000; /* Darker text color for contrast */
+}
+
+#output label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#output input[type="text"],
+#output textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+#output input[type="checkbox"],
+#output input[type="radio"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+#output .radio,
+#output label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555555; /* Adjust label text color */
+}
+
+#output input[type="submit"] {
+    background-color: rgb(230, 104, 59); /* Match the button color with the theme */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+#output input[type="submit"]:hover {
+    background-color: rgb(59, 174, 209); /* Hover color */
+}
+#output {
+  
+    flex: 1;
+    padding: 20px;
+    background: #ffffff; /* Background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    font-size: 16px; /* Font size */
+    line-height: 1.6; /* Line height for readability */
+    color: #fdf7f7; /* Text color */
+}
+
+#output label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#output input[type="text"],
+#output textarea {
+    width: calc(100% - 22px); /* Adjust width for padding */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+#output input[type="checkbox"],
+#output input[type="radio"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+#output .radio,
+#output label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555555; /* Label text color */
+}
+
+#output input[type="submit"] {
+    background-color: rgb(15, 129, 236); /* Submit button background color */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+#output input[type="submit"]:hover {
+    background-color: rgb(59, 174, 209); /* Hover color */
+}
+section {
+    margin-bottom: 40px;
+  }
+  
+  pre {
+    background-color: #000000;
+    padding: 15px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+  
+  code {
+    font-size: 14px;
+    color: #f7f7f7;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  

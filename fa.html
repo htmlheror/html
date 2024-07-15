@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form HTML Code Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="fa.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <img src="fa.png" class="logo" alt="Logo">
+            <ul>
+                <li><a href="index.html"><u>HOME</u></a></li>
+               
+                <li><a href="canva.html"><u>Premium-Software</u>
+                </a></li>
+                <li><a href="#"><u>Watch Tutorial</u></a></li>
+                <li><a href="sec.html"><u>privacy-policy</u></a></li>
+            </ul>
+        </div>
+        <div class="info">
+            <br>  <br>  <br>  <br>
+            <B><U><h3>Welcome to the form HTML Code Generator.</h3><BR></U></B>
+            <h1><B> <span><u>HTML-HERO</u></span></h1></b><BR><BR>
+            <P>Creating a form for your website doesn't require HTML coding expertise with our easy-to-use form HTML Code Generator.<br>
+                Follow these straightforward steps to quickly generate HTML code for your form:</P><BR>
+                <P><B> <h2><span><U>1: Enter Your Form Details</U></span> </h2></B> <BR>
+                    
+                    Input Your Form Labels:<BR>
+                    On the main page, locate the "Form Labels" text area.<BR>
+                    Enter each label for your form elements on a separate line
+                     (e.g., Name, Email, Phone).<BR>
+                    To create checkboxes, use [ ] followed by a space and the label text.<BR><BR>
+                        <B><U> <h2><span><U>Step 2: Watch Your Form Build Automatically</U></span></h2></U></B><BR>
+                    
+                    See Your Form Come to Life:<BR>
+                    As you type in the "Form Labels" section,<BR> your form preview will update in real-time.<BR>
+                    Labels will transform into interactive elements like text inputs, checkboxes, radio buttons, and text areas.<BR><BR>
+                        <B><U> <h2><span><U>Step 3: Copy Your HTML Code</U></span></h2></U></B><BR>
+                    
+                    Retrieve Your HTML Code:<BR>
+                    Once satisfied with your form's preview, scroll down to the "Generated HTML Code" section.<BR>
+                    Click inside the code box to select all HTML code.<BR>
+                    Right-click and choose "Copy" (or use Ctrl + C / Cmd + C) to copy the code.<BR><BR>
+                        <B><U><h2><span><U>Step 4: Integrate into Your Website</U></span></h2></U></B><BR>
+                    
+                    Integrate Your Form into Your Website:<BR>
+                    Open your HTML editor or the HTML file where you want to place the form.<BR>
+                    Paste the copied HTML code (Ctrl + V / Cmd + V) into the appropriate section of your HTML file.<BR>
+                    Save your HTML file and upload it to your website server.<BR><BR>
+                        <B><U><h2><span><U>Step 5: Customize (Optional)</U></span></h2></U></B><BR>
+                    
+                    Customize Your Form (Optional):<BR>
+                    Use CSS to modify the form's appearance using classes and IDs provided in the HTML code.<BR>
+                    Adjust the generated HTML code to suit your specific design preferences or add extra functionality.<BR><BR>
+                        <B><U> <h2><span><U>Step 6: Test Your Form</U></span></h2></U></B><BR>
+                    
+                    Test Your Form:<BR>
+                    Before making your form live, thoroughly test it to ensure all fields and functionalities work correctly.<BR>
+                    Submit the form with different inputs to verify validation and functionality.<BR><BR>
+                        <B><U><h2><span><U>Step 7: Deploy Your Form</U></span></h2></U></B><BR>
+                    
+                    Deploy Your Form:<BR>
+                    Once tested and finalized, deploy your updated HTML file to your website.<BR>
+                    Share the link with your audience to start interacting with your form.</P><BR>
+
+
+                   <a href="facss.html">add-design </a>
+             </div>
+        <div class="app">
+            <div id="editor">
+                <textarea name="formdown" id="formdown" rows="10" placeholder="Enter each of your form labels on a single line."></textarea>
+               
+               
+            </div>
+            <br>
+            <div id="output">Form will render here.</div>
+            <br>
+            <pre id="code">HTML Code will appear here.</pre>
+        </div>
+    </div>
+
+    
+
+    <script src="fa.js"></script>
+    <script>
+      
+      $(document).ready(function() {
+    $('#formdown').keyup(function() {
+        var inputs = $(this).val().split('\n');
+        var x = '<form name="aform">\n';
+        var radiogroup = 0;
+
+        $.each(inputs, function(i, val) {
+            if (val.trim() !== '') {
+                var name = val.trim().toLowerCase().replace(/\s+/g, '-');
+                var labelClass = ''; // Default label class
+                var inputHTML = ''; // HTML for input elements
+
+                if (val.startsWith('() ')) {
+                    radiogroup++;
+                    val = val.replace('() ', '');
+                    labelClass = 'class="radio"';
+                    inputHTML = '<input type="radio" name="radio'+radiogroup+'" value="'+name+'">';
+
+                } else if (val.startsWith('(*) ')) {
+                    radiogroup++;
+                    val = val.replace('(*) ', '');
+                    labelClass = 'class="radio"';
+                    inputHTML = '<input type="radio" name="radio'+radiogroup+'" value="'+name+'" checked>';
+
+                } else if (val.startsWith('[] ')) {
+                    val = val.replace('[] ', '');
+                    inputHTML = '<input type="checkbox" name="'+name+'">';
+
+                } else if (val.startsWith('[*] ')) {
+                    val = val.replace('[*] ', '');
+                    inputHTML = '<input type="checkbox" name="'+name+'" checked>';
+
+                } else if (val.endsWith('>textarea')) {
+                    val = val.replace('>textarea', '');
+                    labelClass = ''; // No special class for textarea labels
+                    inputHTML = '<textarea rows="3" name="'+name+'"></textarea>';
+
+                } else {
+                    inputHTML = '<input type="text" name="'+name+'">';
+                }
+
+                // Construct the label and input HTML
+                x += '<label '+ labelClass +'>'+ val +'<br>'+ inputHTML +'</label>\n';
+            }
+        });
+
+        // Add submit button
+        x += '<input type="submit">\n</form>';
+
+        // Update the output and code elements
+        $('#output').html(x);
+        $('#code').text(x);
+        
+        // Additional styling for dynamically added elements
+        $('#output input[type="text"], #output textarea').addClass('form-control');
+        $('#output input[type="checkbox"], #output input[type="radio"]').addClass('form-check-input');
+        $('#output label.radio').addClass('form-check-label');
+        $('#output input[type="submit"]').addClass('btn btn-primary mt-3'); // Example Bootstrap button style
+    });
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>poll HTML Codes Generator</title>
+    <link rel="stylesheet" href="po.css">
+    <script src="po.js" defer></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="po.png" class="logo" alt="Logo">
+            <nav>
+                <ul><u></u>
+                    <li><a href="index.html"><u>HOME</u></a></li>
+                    <li><a href="canva.html"><u>Premium-Software</u></a></li>
+                    <li><a href="#"><u>Watch Tutorial</u></a></li>
+                    <li><a href="sec.html"><u>privacy-policy</u></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="info">
+           <u> <h3><u>WELCOME TO
+                Poll html codes Generator</u></h3>
+            <h1><span><u>HTML-HERO</u></span></h1>
+            <P>Read the introductory information about the HTML Codes Generator for polls and its purpose.
+            </P>
+            <h3><span><u>Poll Generator </u>
+            </span></h3>
+            <h4><span><B><U>Question Input:</U></B></span> </H4>
+            <P>Enter your poll question in the input field labeled "Enter your question."</P>
+
+            <h4><span><B><U>Choices:</U></B></span> </H4>
+                <P>Start with two default choices, and use the "Add Choice" button to add more as needed. Each choice has a "Remove" button to delete it if not needed.
+                    
+                </P>
+
+                <h4><span><B><U>Create Poll Button:</U></B></span> </H4>
+                    <P>Click "Create Poll" to generate the poll based on your inputs.
+                    </P>
+
+                    <h4><span><B><U>Copy Code Button</U></B></span> </H4>
+                        <P>Once the poll is generated, click "Copy Code" to copy the generated HTML code to your clipboard.
+                        </P>
+
+                        <h3><span><u>Poll Display Section</u>
+
+                        </span></h3>
+             
+                        <P>After creating the poll, it will display in the section below (div class="poll-display">).
+
+                        </P>
+            
+                        <h4><span><B><U>Question: </U></B></span> </H4>
+                            <P>The poll question will appear as a heading (h2 id="display-question">/h2 ).
+
+                            </P>
+            
+                            <h4><span><B><U>Choices: </U></B></span> </H4>
+                                <P>The choices you entered will display below the question (div id="display-choices">/div>).
+
+                                </P>
+                                <h4><span><B><U>Total Votes:  </U></B></span> </H4>
+                                    <P>If applicable, information about total votes or other relevant data may appear (div id="total-votes">/div>).
+
+    
+                                    </P>
+                                    <h3><span><u>Tips for Customization</u>
+
+                                    </span></h3>
+                                    <h4><span><B><U> Styling:  </U></B></span> </H4>
+                                        <P>Customize the appearance using the style.css file linked in the /head>.
+    
+        
+                                        </P>
+
+<h4><span><B><U>Functionality: </U></B></span> </H4>
+                                    <P>Modify the poll generation behavior or add additional features by editing script.js.
+
+
+    
+                                    </P>
+                                    <h4><span><B><U> Integration: </U></B></span> </H4>
+                                        <P>Embed the generated poll HTML code into your website or share it online to gather responses.
+
+    
+        
+                                        </P>
+                                        <p>This setup allows you to quickly create and integrate poll functionality into your web projects using HTML and JavaScript, providing an interactive way to engage with your audience.
+                                        </p>
+
+                
+                                <br>
+                                <br>
+                                <br>
+
+          
+
+        </div>
+        <div class="image">
+            
+        </div>
+        <div class="container">
+            <h1>Poll Generator</h1>
+            <div class="poll-creation">
+                <h2>Create a Poll</h2>
+                <input type="text" id="poll-question" placeholder="Enter your question" required>
+                <div id="choices-container">
+                    <div class="choice-item">
+                        <input type="text" class="choice" placeholder="Choice 1">
+                        <button class="remove-choice">Remove</button>
+                    </div>
+                    <div class="choice-item">
+                        <input type="text" class="choice" placeholder="Choice 2">
+                        <button class="remove-choice">Remove</button>
+                    </div>
+                </div>
+                <button id="add-choice">Add Choice</button>
+                <button id="create-poll">Create Poll</button>
+                <button id="copy-code">Copy Code</button>
+            </div>
+            <div class="poll-display" id="poll-display">
+                <h2 id="display-question"></h2>
+                <div id="display-choices"></div>
+                <div id="total-votes"></div>
+            </div>
+        </div>
+
+
+
+
+        
+        <div class="icons">
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+          
+        </div>
+    </div>
+</body>
+</html>
